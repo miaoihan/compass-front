@@ -1,6 +1,6 @@
 <template>
   <div class="submit-wrapper">
-    <button class="btn-clear submit">{{text}}</button>
+    <button class="btn-clear submit" @click="click" type="button" :style=" {backgroundColor: backgroundColor}">{{text}}</button>
   </div>
 </template>
 
@@ -8,8 +8,7 @@
   export default{
     data () {
       return {
-        msg: 'hello vue',
-        style: {}
+        msg: 'hello vue'
       }
     },
     props: {
@@ -17,13 +16,18 @@
         type: String,
         default: '确认'
       },
-      color: {
+      backgroundColor: {
         type: String,
         default: '#0e2d60'
       }
     },
     components: {},
-    methods: {}
+    methods: {
+      click () {
+        console.log(this.backgroundColor)
+        return false
+      }
+    }
   }
 </script>
 
@@ -33,8 +37,10 @@
   }
 
   .submit {
-    width 2.7rem;
+    width 100%
     height 0.4rem;
     font-size 0.18rem
+    font-weight 700
+    display block
   }
 </style>

@@ -19,7 +19,6 @@
     components: {},
     methods: {
       notify () {
-
       }
     }
   }
@@ -31,10 +30,11 @@
   }
 
   .text-input {
+    display block
     height 0.4rem
-    width 2.7rem
+    width 100%
     border none
-    font-size 0.18rem
+    font-size 0.17rem
     padding-left 0.2rem
     padding-right 0.2rem
     &:active, &:focus {

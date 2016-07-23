@@ -1,23 +1,20 @@
 <template>
-  <compass-header></compass-header>
   <login></login>
+  <signup></signup>
 </template>
 
 <script>
-  import Hello from './components/Hello'
-  import CompassHeader from './components/CompassHeader'
-  import Login from './components/Login'
-
+  /* eslint-disable */
+  import Login from './pages/Login'
+  import Signup from './pages/Signup'
   export default {
     components: {
-      Hello,
-      CompassHeader,
-      Login
+      Signup
     }
   }
 </script>
 
-<style>
+<style lang="stylus">
   body {
     position: relative;
     margin: 0;
@@ -57,7 +54,7 @@
   body,
   button, input, select, textarea /* for ie */
   {
-    font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+    font: 12px / 1.5 tahoma, arial, \5b8b\4f53, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -88,10 +85,9 @@
   /** 重置文本格式元素 **/
   a {
     text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
+    &:hover, &:active {
+      text-decoration: none;
+    }
   }
 
   /** 重置表单元素 **/
@@ -120,16 +116,22 @@
 
   .container {
     margin: 0 auto;
+    max-width: 3rem;
+  }
+
+  .container-fluid {
+    margin: 0 auto;
     width: 90%;
   }
 
-  .btn-clear{
+  .btn-clear {
     padding: 0;
     border: none;
     background: none;
     color: #fff;
   }
-  *{
+
+  * {
     box-sizing: border-box;
   }
 </style>
