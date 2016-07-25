@@ -27,11 +27,6 @@
 
 <style scoped lang="stylus">
 
-  .submit {
-    background-color #0e2d60
-    font-size 0.2rem;
-    color #fff;
-  }
 
   .container-login {
     margin: 0 auto;

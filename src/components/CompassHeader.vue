@@ -1,9 +1,9 @@
 <template>
   <div class="header">
-    <img v-if="showLogo" class="logo" src="../assets/logo.png">
-    <a v-if="showLeftArrow" class="iconfont icon-left left-arrow"></a>
+    <img v-if="!title" class="logo" src="../assets/logo.png">
+    <a v-if="title" class="iconfont icon-left left-arrow"></a>
     <div v-if="title" class="title" v-if="title">{{title}}</div>
-    <button v-if="showToggle" class="btn-clear toggle iconfont icon-toggle"></button>
+    <button v-if="!title" class="btn-clear toggle iconfont icon-toggle"></button>
 
   </div>
   <div v-if="needFixHeight" class="header-fix-height"></div>
@@ -16,29 +16,18 @@
         type: Boolean,
         default: true
       },
-      showLogo: {
-        type: Boolean,
-        default: false
-      },
-      showLeftArrow: {
-        type: Boolean,
-        default: true
-      },
-      showToggle: {
-        type: Boolean,
-        default: false
-      },
       title: {
         type: String,
         default: ''
       }
-
     }
   }
 </script>
 
 <style lang="stylus" scoped>
-  $headerHeight = 0.44rem
+
+  @import "../assets/stylus/variables.styl"
+
   .header {
     position fixed
     margin 0 auto
@@ -67,10 +56,9 @@
     }
     .title {
       color #fff
-      $fontSize = .18rem
       position: absolute
       line-height $headerHeight
-      font-size $fontSize
+      font-size $headerTitleFontSize
       text-align center
       left 0
       right 0

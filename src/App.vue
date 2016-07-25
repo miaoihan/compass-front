@@ -1,15 +1,17 @@
 <template>
   <login></login>
   <signup></signup>
+  <evaluate-result></evaluate-result>
 </template>
 
 <script>
   /* eslint-disable */
   import Login from './pages/Login'
   import Signup from './pages/Signup'
+  import EvaluateResult from './pages/EvaluateResult'
   export default {
     components: {
-      Signup
+      EvaluateResult
     }
   }
 </script>
@@ -29,6 +31,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    font-family: "Helvetica Neue", Arial, verdana, sans-serif;
   }
 
   /*

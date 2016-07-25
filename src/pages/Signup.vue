@@ -1,12 +1,13 @@
 <template>
   <compass-header title="注册"></compass-header>
-  <sign-form></sign-form>
+  <signup-form></signup-form>
 </template>
 
 <script>
   import CompassHeader from '../components/CompassHeader'
+  import SignupForm from '../components/SignupForm'
   export default{
-    components: {CompassHeader}
+    components: {CompassHeader, SignupForm}
   }
 </script>
 
