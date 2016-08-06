@@ -52,7 +52,6 @@
     .left-arrow {
       color: #fff;
       margin-left 0.14rem;
-      font-size: .18rem;
     }
     .title {
       color #fff

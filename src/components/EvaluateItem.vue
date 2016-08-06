@@ -23,11 +23,11 @@
     .collage{
       width 100%;
       height 0.8rem
-      border-bottom  1px solid #ebebeb;
     }
     .grade{
-      height 0.4rem
+      height 0.42rem
       width 100%;
+      border-top  1px solid #ebebeb;
       border-bottom  1px solid #ebebeb;
     }
   }
